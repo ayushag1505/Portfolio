@@ -32,7 +32,7 @@
     --br-4 : url(../assets/face-animation-light/br-4.png) ;
     --br-5 : url(../assets/face-animation-light/br-5.png) ;
 
-    --sun : url(../assets/icon/sun.png) ;
+    --sun : url(../assets/icons/sun.png) ;
 }
 
 :root.dark-mode {
@@ -96,5 +96,9 @@
 }
 
 .dark-mode #toggle-button{
+    justify-content: flex-end;
+}
+
+.dark-mode #color-mode {
     justify-content: flex-end;
 }
