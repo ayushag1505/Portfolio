@@ -45,3 +45,118 @@ h1, h2, h5, p{
     background-position: center;
     background-size: cover;
 }
+
+
+#grid{
+    position: absolute;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    height: 100vh;
+    width: 100vw;
+}
+
+#grid_tl_btn,
+#grid_tr_btn,
+#grid_bl_btn,
+#grid_br_btn {
+    height: 18.75rem;
+    width: 18.75rem;
+    background: var(--bg);
+    color: var(--text);
+    border: var(--border);
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+    text-align: center;
+    font-weight: 800;
+    font-size: 1.5rem;
+    z-index: 100;
+    border-radius: 40%;
+    transition: transform 0.2s ease-in-out;
+}
+
+#grid_tl_content,
+#grid_tr_content,
+#grid_bl_content,
+#grid_br_content {
+    position: absolute;
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+#grid_tl_btn,
+#grid_tr_btn {
+    align-items: flex-end;
+    padding-bottom: 0.5rem;
+}
+
+#grid_bl_btn,
+#grid_br_btn {
+    padding-top: 0.5rem;
+}
+
+#grid_tl_btn:active,
+#grid_br_btn:active {
+    transform: rotate(-45deg) scale(1.05);
+}
+
+#grid_bl_btn:active,
+#grid_tr_btn:active {
+    transform: rotate(45deg) scale(1.05);
+}
+
+#grid_tl_btn {
+    transform: rotate(-45deg);
+    top: -11.5rem;
+    left: -11.5rem;
+}
+
+#grid_tl_content {
+    width: 30vw;
+    top: 10vh;
+    left: 0 ;
+    /* transform: translateX(-100vw) translateY(-100vh); */
+}
+
+article {
+    background: rgb(245, 245, 245);
+    font-size: 0.8rem;
+    list-style: none;
+    border: var(--border);
+    border-radius: 2rem;
+    margin: 1rem;
+    padding: 0.5rem;
+    width: 8.75rem;
+    min-width: 8.75rem;
+}
+
+article h2{
+    font-size: 1rem;
+    padding: 0.3rem;
+}
+
+article p {
+    padding-bottom: 0.3rem;
+}
+
+article h2,
+article p {
+    color: #333;
+}
+
+.cards{
+    padding: 0;
+}
+
+.cards_content {
+    display: flex;
+    align-items: center;
+}
+
+.cards_content_text {
+    color: var(--text);
+    text-align: center;
+    margin: 0 1rem;
+}
