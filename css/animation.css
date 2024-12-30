@@ -9,3 +9,108 @@
         transform: translateY(0);
     }
 }
+
+.animate-top-left {
+    animation-name: top-left ;
+}
+
+.reverse-animate-top-left {
+    animation-name: reverse-top-left ;
+}
+
+.animate-top-left,
+.reverse-animate-top-left {
+    animation-timing-function: ease-in-out;
+    animation-duration: 0.2s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes top-left {
+    0%{
+        background-image: var(--tl-1);
+    }
+    25%{
+        background-image: var(--tl-2);
+    }
+    50%{
+        background-image: var(--tl-3);
+    }
+    75%{
+        background-image: var(--tl-4);
+    }
+    100%{
+        background-image: var(--tl-5);
+    }
+}
+
+@keyframes reverse-top-left {
+    0%{
+        background-image: var(--tl-5);
+    }
+    25%{
+        background-image: var(--tl-4);
+    }
+    50%{
+        background-image: var(--tl-3);
+    }
+    75%{
+        background-image: var(--tl-2);
+    }
+    100%{
+        background-image: var(--tl-1);
+    }
+}
+
+
+.animate-top-right {
+    animation-name: top-right ;
+}
+
+.reverse-animate-top-right {
+    animation-name: reverse-top-right ;
+}
+
+.animate-top-right,
+.reverse-animate-top-right {
+    animation-timing-function: ease-in-out;
+    animation-duration: 0.2s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes top-right {
+    0%{
+        background-image: var(--tr-1);
+    }
+    25%{
+        background-image: var(--tr-2);
+    }
+    50%{
+        background-image: var(--tr-3);
+    }
+    75%{
+        background-image: var(--tr-4);
+    }
+    100%{
+        background-image: var(--tr-5);
+    }
+}
+
+@keyframes reverse-top-right {
+    0%{
+        background-image: var(--tr-5);
+    }
+    25%{
+        background-image: var(--tr-4);
+    }
+    50%{
+        background-image: var(--tr-3);
+    }
+    75%{
+        background-image: var(--tr-2);
+    }
+    100%{
+        background-image: var(--tr-1);
+    }
+}

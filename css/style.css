@@ -54,6 +54,7 @@ h1, h2, h5, p{
     grid-template-columns: 1fr 1fr;
     height: 100vh;
     width: 100vw;
+    overflow: hidden;
 }
 
 #grid_tl_btn,
@@ -84,6 +85,7 @@ h1, h2, h5, p{
     position: absolute;
     text-align: center;
     transition: transform 0.3s ease-in-out;
+    color: var(--text-alt);
 }
 
 #grid_tl_btn,
@@ -117,7 +119,7 @@ h1, h2, h5, p{
     width: 30vw;
     top: 10vh;
     left: 0 ;
-    /* transform: translateX(-100vw) translateY(-100vh); */
+    transform: translateX(-100vw) translateY(-100vh);
 }
 
 article {
@@ -159,4 +161,61 @@ article p {
     color: var(--text);
     text-align: center;
     margin: 0 1rem;
+}
+
+#grid_tr_btn {
+    top: -11.5rem ;
+    right: -11.5rem ;
+    transform: rotate(45deg);
+}
+
+#grid_tr_content {
+    width: 30vw;
+    top: 10vh;
+    right: 0;
+    transform: translateX(100vw) translateY(-100vh);
+}
+
+.experience{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.experience_skill {
+    display: flex;
+    flex-direction: column;
+    padding: 1.2rem;
+    margin: 0;
+    width: fit-content;
+}
+
+.experience_skill div{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 13.5rem;
+}
+
+.experience_skill div img {
+    padding: 0;
+    margin-left: 0.5rem;
+}
+
+.experience_skill div h2 {
+    text-align: left;
+}
+
+.experience_skill div p {
+    padding: 0;
+}
+
+.experience_skill div h2,
+.experience_skill div p {
+    font-size: 0.8rem;
+}
+
+.experience_skill div div {
+    justify-content: space-between;
 }
