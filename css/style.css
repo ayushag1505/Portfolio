@@ -234,7 +234,7 @@ article p {
 }
 
 .project {
-    width: 70%;
+    width: 100%;
     display: flex;
     flex-wrap: wrap;
     border-radius: 2rem;
