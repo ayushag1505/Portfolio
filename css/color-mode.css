@@ -43,29 +43,29 @@
     --border : 0.01rem solid #5a5a5a ;
     --text : #fff ;
 
-    --tlw-1 : url(../assets/face-animation-dark/tlw-1.png) ;
-    --tlw-2 : url(../assets/face-animation-dark/tlw-2.png) ;
-    --tlw-3 : url(../assets/face-animation-dark/tlw-3.png) ;
-    --tlw-4 : url(../assets/face-animation-dark/tlw-4.png) ;
-    --tlw-5 : url(../assets/face-animation-dark/tlw-5.png) ;
+    --tl-1 : url(../assets/face-animation-dark/tlw-1.png) ;
+    --tl-2 : url(../assets/face-animation-dark/tlw-2.png) ;
+    --tl-3 : url(../assets/face-animation-dark/tlw-3.png) ;
+    --tl-4 : url(../assets/face-animation-dark/tlw-4.png) ;
+    --tl-5 : url(../assets/face-animation-dark/tlw-5.png) ;
 
-    --trw-1 : url(../assets/face-animation-dark/trw-1.png) ;
-    --trw-2 : url(../assets/face-animation-dark/trw-2.png) ;
-    --trw-3 : url(../assets/face-animation-dark/trw-3.png) ;
-    --trw-4 : url(../assets/face-animation-dark/trw-4.png) ;
-    --trw-5 : url(../assets/face-animation-dark/trw-5.png) ;
+    --tr-1 : url(../assets/face-animation-dark/trw-1.png) ;
+    --tr-2 : url(../assets/face-animation-dark/trw-2.png) ;
+    --tr-3 : url(../assets/face-animation-dark/trw-3.png) ;
+    --tr-4 : url(../assets/face-animation-dark/trw-4.png) ;
+    --tr-5 : url(../assets/face-animation-dark/trw-5.png) ;
 
-    --blw-1 : url(../assets/face-animation-dark/blw-1.png) ;
-    --blw-2 : url(../assets/face-animation-dark/blw-2.png) ;
-    --blw-3 : url(../assets/face-animation-dark/blw-3.png) ;
-    --blw-4 : url(../assets/face-animation-dark/blw-4.png) ;
-    --blw-5 : url(../assets/face-animation-dark/blw-5.png) ;
+    --bl-1 : url(../assets/face-animation-dark/blw-1.png) ;
+    --bl-2 : url(../assets/face-animation-dark/blw-2.png) ;
+    --bl-3 : url(../assets/face-animation-dark/blw-3.png) ;
+    --bl-4 : url(../assets/face-animation-dark/blw-4.png) ;
+    --bl-5 : url(../assets/face-animation-dark/blw-5.png) ;
 
-    --brw-1 : url(../assets/face-animation-dark/brw-1.png) ;
-    --brw-2 : url(../assets/face-animation-dark/brw-2.png) ;
-    --brw-3 : url(../assets/face-animation-dark/brw-3.png) ;
-    --brw-4 : url(../assets/face-animation-dark/brw-4.png) ;
-    --brw-5 : url(../assets/face-animation-dark/brw-5.png) ;
+    --br-1 : url(../assets/face-animation-dark/brw-1.png) ;
+    --br-2 : url(../assets/face-animation-dark/brw-2.png) ;
+    --br-3 : url(../assets/face-animation-dark/brw-3.png) ;
+    --br-4 : url(../assets/face-animation-dark/brw-4.png) ;
+    --br-5 : url(../assets/face-animation-dark/brw-5.png) ;
 
     --moon : url(../assets/icons/moon.png)
 }
@@ -93,10 +93,6 @@
 
 .dark-mode #toggle-button{
     background-image: var(--moon);
-}
-
-.dark-mode #toggle-button{
-    justify-content: flex-end;
 }
 
 .dark-mode #color-mode {
