@@ -114,3 +114,56 @@
         background-image: var(--tr-1);
     }
 }
+
+
+.animate-bottom-left {
+    animation-name: bottom-left ;
+}
+
+.reverse-animate-bottom-left {
+    animation-name: reverse-bottom-left ;
+}
+
+.animate-bottom-left,
+.reverse-animate-bottom-left {
+    animation-timing-function: ease-in-out;
+    animation-duration: 0.2s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes bottom-left {
+    0%{
+        background-image: var(--bl-1);
+    }
+    25%{
+        background-image: var(--bl-2);
+    }
+    50%{
+        background-image: var(--bl-3);
+    }
+    75%{
+        background-image: var(--bl-4);
+    }
+    100%{
+        background-image: var(--bl-5);
+    }
+}
+
+@keyframes reverse-bottom-left {
+    0%{
+        background-image: var(--bl-5);
+    }
+    25%{
+        background-image: var(--bl-4);
+    }
+    50%{
+        background-image: var(--bl-3);
+    }
+    75%{
+        background-image: var(--bl-2);
+    }
+    100%{
+        background-image: var(--bl-1);
+    }
+}

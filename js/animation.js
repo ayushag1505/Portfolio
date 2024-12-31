@@ -2,17 +2,17 @@ const boxImage = document.querySelector('#box_animation_img')
 
 const tl = document.querySelector('#grid_tl') 
 const tr = document.querySelector('#grid_tr')
-// const bl = document.querySelector('#grid_bl')
+const bl = document.querySelector('#grid_bl')
 // const br = document.querySelector('#grid_br')
 
 const tlBtn = document.querySelector('#grid_tl_btn')
 const trBtn = document.querySelector('#grid_tr_btn')
-// const blBtn = document.querySelector('#grid_bl_btn')
+const blBtn = document.querySelector('#grid_bl_btn')
 // const brBtn = document.querySelector('#grid_br_btn')
 
 const tlContent = document.querySelector('#grid_tl_content')
 const trContent = document.querySelector('#grid_tr_content')
-// const blContent = document.querySelector('#grid_bl_content')
+const blContent = document.querySelector('#grid_bl_content')
 // const brContent = document.querySelector('#grid_br_content')
 
 const projectOne = document.querySelector('.p-1')
@@ -30,8 +30,8 @@ let tlHidden = "translateX(-100vw) translateY(-100vh)"
 let trActive = "translateX(-5vw) translateY(0)"
 let trHidden = "translateX(100vw) translateY(-100vh)"
 
-// let blActive = "translateX(10vw) translateY(7vh)"
-// let blHidden = "translateX(-100vw) translateY(100vh)"
+let blActive = "translateX(10vw) translateY(7vh)"
+let blHidden = "translateX(-100vw) translateY(100vh)"
 
 // let brActive = "translateX(-5vw) translateY(0)"
 // let brHidden = "translateX(100vw) translateY(100vh)"
@@ -55,7 +55,7 @@ function handleWindowResize() {
                 tlContent.style.zIndex = "200" ;
                 tlBtn.style.zIndex = "300" ;
                 trBtn.style.zIndex = "100" ;
-                // blBtn.style.zIndex = "100" ;
+                blBtn.style.zIndex = "100" ;
                 // brBtn.style.zIndex = "100" ;
             } else{
                 tlActive = "translateX(5vw) translateY(0)" ;
@@ -83,7 +83,7 @@ function handleWindowResize() {
                 trContent.style.zIndex = "200" ;
                 trBtn.style.zIndex = "300" ;
                 tlBtn.style.zIndex = "100" ;
-                // blBtn.style.zIndex = "100" ;
+                blBtn.style.zIndex = "100" ;
                 // brBtn.style.zIndex = "100" ;
             } else{
                 trActive = "translateX(-5vw) translateY(0)" ;
@@ -95,6 +95,57 @@ function handleWindowResize() {
             }
             break ;
         case "bottom-left" :
+            if(window.innerWidth <= 600) {
+                blActive = "translateX(0) translateY(0)" ;
+                blContent.style.transform = "translateX(0vw) translateY(0)" ;
+                blContent.style.height = "100vh" ;
+                blContent.style.width = "100vw" ;
+                blContent.style.top = "0" ;
+                blContent.style.display = "flex" ;
+                blContent.style.alignItems = "center" ;
+                blContent.style.background = "var(--bg-transparent)" ;
+                blContent.style.zIndex = "200" ;
+                blBtn.style.zIndex = "300" ;
+                tlBtn.style.zIndex = "100" ;
+                trBtn.style.zIndex = "100" ;
+                // brBtn.style.zIndex = "100" ;
+                projectOne.style.width = "70%" ;
+                projectOne.style.margin = "auto auto 0.5rem" ;
+                projectTwo.style.width = "70%" ;
+                projectTwo.style.margin = "auto auto 0.5rem" ;
+                projectThree.style.width = "70%" ;
+                projectThree.style.margin = "auto auto 0.5rem" ;
+            } else if(window.innerWidth <= 1100) {
+                blActive = "translateX(0) translateY(0)" ;
+                blContent.style.transform = "translateX(0vw) translateY(0)" ;
+                blContent.style.height = "100vh" ;
+                blContent.style.width = "100vw" ;
+                blContent.style.top = "0" ;
+                blContent.style.display = "flex" ;
+                blContent.style.alignItems = "center" ;
+                blContent.style.background = "var(--bg-transparent)" ;
+                blContent.style.zIndex = "200" ;
+                blBtn.style.zIndex = "300" ;
+                tlBtn.style.zIndex = "100" ;
+                trBtn.style.zIndex = "100" ;
+                // brBtn.style.zIndex = "100" ;
+                projectOne.style.width = "40%" ;
+                projectOne.style.margin = "auto auto 0.5rem" ;
+                projectTwo.style.width = "40%" ;
+                projectTwo.style.margin = "auto auto 0.5rem" ;
+                projectThree.style.width = "40%" ;
+                projectThree.style.margin = "auto auto 0.5rem" ;
+            } else{
+                blActive = "translateX(10vw) translateY(7vh)" ;
+                blContent.style.transform = "translateX(10vw) translateY(7vh)" ;
+                blContent.style.height = "0" ;
+                blContent.style.width = "15rem" ;
+                blContent.style.top = "40vh" ;
+                blContent.style.display = "block" ;
+                projectOne.style.width = "100%" ;
+                projectTwo.style.width = "100%" ;
+                projectThree.style.width = "100%" ;
+            }
             break ;
         case "bottom-right" :
             break ;
@@ -122,8 +173,8 @@ function playAnimation(animation, reverseAnimation) {
 function playClosingAnimation(reverseAnimation) {
     tlBtn.innerHTML = "About" ;
     trBtn.innerHTML = "Experience"
-    // blBtn.innerHTML = "Contact"
-    // brBtn.innerHTML = "Projects"
+    blBtn.innerHTML = "Projects"
+    // brBtn.innerHTML = "Contact"
 
     switch (activeCorner) {
         case "top-left" :
@@ -137,6 +188,9 @@ function playClosingAnimation(reverseAnimation) {
             trContent.style.transform = trHidden ;
             break ;
         case "bottom-left" :
+            blBtn.style.background = bgColor ;
+            blBtn.style.color = textColor ;
+            blContent.style.transform = blHidden ;
             break ;
         case "bottom-right" :
             break ;
@@ -157,7 +211,7 @@ tlBtn.onclick = function() {
         playClosingAnimation("reverse-animate-top-left") 
     } else {
         trBtn.innerHTML = "Experience"
-        // blBtn.innerHTML = "Contact"
+        blBtn.innerHTML = "Projects"
         // brBtn.innerHTML = "Projects"
 
         activeCorner = "top-left" ;
@@ -168,17 +222,17 @@ tlBtn.onclick = function() {
 
         tlBtn.style.background = bgColorAlt ;
         trBtn.style.background = bgColor ;
-        // blBtn.style.background = bgColor ;
+        blBtn.style.background = bgColor ;
         // brBtn.style.background = bgColor ;
 
         tlBtn.style.color = textColorAlt ;
         trBtn.style.color = textColor ;
-        // blBtn.style.color = textColor ;
+        blBtn.style.color = textColor ;
         // brBtn.style.color = textColor ;
 
         tlContent.style.transform = tlActive ;
         trContent.style.transform = trHidden ;
-        // blContent.style.transform = blHidden ;
+        blContent.style.transform = blHidden ;
         // brContent.style.transform = brHidden ;
     }
 }
@@ -189,7 +243,7 @@ trBtn.onclick = function() {
         playClosingAnimation("reverse-animate-top-right")
     } else {
         tlBtn.innerHTML = "About"
-        // blBtn.innerHTML = "Contact"
+        blBtn.innerHTML = "Projects"
         // brBtn.innerHTML = "Projects"
 
         activeCorner = "top-right" ;
@@ -200,52 +254,52 @@ trBtn.onclick = function() {
 
         tlBtn.style.background = bgColor ;
         trBtn.style.background = bgColorAlt ;
-        // blBtn.style.background = bgColor ;
+        blBtn.style.background = bgColor ;
         // brBtn.style.background = bgColor ;
 
         tlBtn.style.color = textColor ;
         trBtn.style.color = textColorAlt ;
-        // blBtn.style.color = textColor ;
+        blBtn.style.color = textColor ;
         // brBtn.style.color = textColor ;
 
         tlContent.style.transform = tlHidden ;
         trContent.style.transform = trActive ;
-        // blContent.style.transform = blHidden ;
+        blContent.style.transform = blHidden ;
         // brContent.style.transform = brHidden ;
     }
 }
 
 
-// blBtn.onclick = function() {
-//     if(activeCorner === "bottom-left") {
-//         playClosingAnimation("reverse-animate-bottom-left")
-//     } else {
-//         trBtn.innerHTML = "Experience"
-//         tlBtn.innerHTML = "About"
-//         brBtn.innerHTML = "Contact"
+blBtn.onclick = function() {
+    if(activeCorner === "bottom-left") {
+        playClosingAnimation("reverse-animate-bottom-left")
+    } else {
+        trBtn.innerHTML = "Experience"
+        tlBtn.innerHTML = "About"
+        // brBtn.innerHTML = "Contact"
 
-//         activeCorner = "bottom-left" ;
-//         blBtn.innerHTML = "&uarr;<br/>Projects" ;
+        activeCorner = "bottom-left" ;
+        blBtn.innerHTML = "Projects<br/>&darr;" ;
 
-//         handleWindowResize() ;
-//         playAnimation("animate-bottom-left", "reverse-animate-bottom-left") ;
+        handleWindowResize() ;
+        playAnimation("animate-bottom-left", "reverse-animate-bottom-left") ;
 
-//         tlBtn.style.background = bgColor ;
-//         trBtn.style.background = bgColor ;
-//         blBtn.style.background = bgColorAlt ;
-//         brBtn.style.background = bgColor ;
+        tlBtn.style.background = bgColor ;
+        trBtn.style.background = bgColor ;
+        blBtn.style.background = bgColorAlt ;
+        // brBtn.style.background = bgColor ;
 
-//         tlBtn.style.color = textColor ;
-//         trBtn.style.color = textColor ;
-//         blBtn.style.color = textColorAlt ;
-//         brBtn.style.color = textColor ;
+        tlBtn.style.color = textColor ;
+        trBtn.style.color = textColor ;
+        blBtn.style.color = textColorAlt ;
+        // brBtn.style.color = textColor ;
 
-//         tlContent.style.transform = tlHidden ;
-//         trContent.style.transform = trHidden ;
-//         blContent.style.transform = blActive ;
-//         brContent.style.transform = brHidden ;
-//     }
-// }
+        tlContent.style.transform = tlHidden ;
+        trContent.style.transform = trHidden ;
+        blContent.style.transform = blActive ;
+        // brContent.style.transform = brHidden ;
+    }
+}
 
 
 // brBtn.onclick = function() {
