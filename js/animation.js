@@ -200,7 +200,7 @@ function playAnimation(animation, reverseAnimation) {
 
 function playClosingAnimation(reverseAnimation) {
     tlBtn.innerHTML = "About" ;
-    trBtn.innerHTML = "Experience"
+    trBtn.innerHTML = "Tech-Stack"
     blBtn.innerHTML = "Projects"
     brBtn.innerHTML = "Contact"
 
@@ -241,7 +241,7 @@ tlBtn.onclick = function() {
     if(activeCorner === "top-left") {
         playClosingAnimation("reverse-animate-top-left") 
     } else {
-        trBtn.innerHTML = "Experience"
+        trBtn.innerHTML = "Tech-Stack"
         blBtn.innerHTML = "Projects"
         brBtn.innerHTML = "Contact"
 
@@ -278,7 +278,7 @@ trBtn.onclick = function() {
         brBtn.innerHTML = "Contact"
 
         activeCorner = "top-right" ;
-        trBtn.innerHTML = "&uarr;<br/>Experience" ;
+        trBtn.innerHTML = "&uarr;<br/>Tech-Stack" ;
 
         handleWindowResize() ;
         playAnimation("animate-top-right", "reverse-animate-top-right") ;
@@ -305,7 +305,7 @@ blBtn.onclick = function() {
     if(activeCorner === "bottom-left") {
         playClosingAnimation("reverse-animate-bottom-left")
     } else {
-        trBtn.innerHTML = "Experience"
+        trBtn.innerHTML = "Tech-Stack"
         tlBtn.innerHTML = "About"
         brBtn.innerHTML = "Contact"
 
@@ -337,7 +337,7 @@ brBtn.onclick = function() {
     if(activeCorner === "bottom-right") {
         playClosingAnimation("reverse-animate-bottom-right")
     } else {
-        trBtn.innerHTML = "Experience"
+        trBtn.innerHTML = "Tech-Stack"
         tlBtn.innerHTML = "About"
         blBtn.innerHTML = "Projects"
 
